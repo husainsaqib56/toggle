@@ -3,57 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bundle & Save</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Expandable Box</title>
   </head>
   <body>
     <div class="container">
-      <h1>Bundle & Save</h1>
-      <div class="box" onclick="toggleSize()">
-        <div class="cart-details" id="cartDetails">
-          <div class="cart">
-            <div class="product">
-              <input type="radio" name="product" id="product1" />
-              <label for="product1"><h3>Product 1</h3></label>
-              <select>
-                <option>Select Color</option>
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
+      <h2>Bundle & Save</h2>
+      <div class="bundle-options">
+        <div class="option">
+          <div class="option-header">
+            <input
+              type="radio"
+              name="bundle"
+              id="one-pair"
+              value="1"
+              onchange="updateBundle()"
+            />
+            <div class="pair-info">
+              <label for="one-pair">1 Pair</label>
+              <span class="price">DKK 195.00</span>
+            </div>
+            <span class="discount">50% OFF</span>
+          </div>
+          <div class="pair-details" id="pair-details-1">
+            <div class="pair">
+              <span>#1</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
               </select>
-              <select>
-                <option>Select Size</option>
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="option active">
+          <div class="option-header">
+            <input
+              type="radio"
+              name="bundle"
+              id="two-pair"
+              value="2"
+              checked
+              onchange="updateBundle()"
+            />
+            <div class="pair-info">
+              <label for="two-pair">2 Pair</label>
+              <span class="price">DKK 345.00</span>
+            </div>
+            <span class="discount popular">Most Popular 40% OFF</span>
+          </div>
+          <div class="pair-details" id="pair-details-2">
+            <div class="pair">
+              <span>#1</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+            <div class="pair">
+              <span>#2</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="option">
+          <div class="option-header">
+            <input
+              type="radio"
+              name="bundle"
+              id="three-pair"
+              value="3"
+              onchange="updateBundle()"
+            />
+            <div class="pair-info">
+              <label for="three-pair">3 Pair</label>
+              <span class="price">DKK 528.00</span>
+            </div>
+            <span class="discount">60% OFF</span>
+          </div>
+          <div class="pair-details" id="pair-details-3">
+            <div class="pair">
+              <span>#1</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+            <div class="pair">
+              <span>#2</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+            <div class="pair">
+              <span>#3</span>
+              <select class="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+              <select class="color">
+                <option value="colour">Colour</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
               </select>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="box" onclick="toggleSize('cartDetails2')">
-        <h3>Product Bundle 2</h3>
-        <div class="cart-details" id="cartDetails2">
-          <div class="product">
-            <input type="radio" name="product2" />
-            <label><h3>Product 2</h3></label>
-            <select>
-              <option>Select Color</option>
-              <option>Black</option>
-              <option>White</option>
-              <option>Gray</option>
-            </select>
-            <select>
-              <option>Select Size</option>
-              <option>Small</option>
-              <option>Medium</option>
-              <option>Large</option>
-            </select>
-          </div>
-        </div>
+      <div class="summary">
+        <p class="text-color">Free 2 Day Shipping</p>
+        <p>Total: <span id="total-price">DKK 360.00</span></p>
       </div>
+      <button class="add-to-cart">+ Add to Cart</button>
+      <p class="powered-by">&copy; <i>Powered by Pumper</i></p>
     </div>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
