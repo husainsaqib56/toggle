@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expandable Box</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bundle & Save</h1>
+      <div class="box" onclick="toggleSize()">
+        <div class="cart-details" id="cartDetails">
+          <div class="cart">
+            <div class="product">
+              <input type="radio" name="product" id="product1" />
+              <label for="product1"><h3>Product 1</h3></label>
+              <select>
+                <option>Select Color</option>
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+              <select>
+                <option>Select Size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" onclick="toggleSize('cartDetails2')">
+        <h3>Product Bundle 2</h3>
+        <div class="cart-details" id="cartDetails2">
+          <div class="product">
+            <input type="radio" name="product2" />
+            <label><h3>Product 2</h3></label>
+            <select>
+              <option>Select Color</option>
+              <option>Black</option>
+              <option>White</option>
+              <option>Gray</option>
+            </select>
+            <select>
+              <option>Select Size</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
